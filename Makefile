@@ -1,12 +1,12 @@
-ARCHS = arm64
-TARGET = iphone:clang:13.1:13.1
+ARCHS = arm64 arm64e
+TARGET = iphone:clang:latest:latest
 INSTALL_TARGET_PROCESSES = SpringBoard
 
 include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = Rotaty
 
-Rotaty_FILES = Tweak.x
+Rotaty_FILES = Tweak.xm
 Rotaty_CFLAGS = -fobjc-arc
 Rotaty_Framworks = UIKit
 
