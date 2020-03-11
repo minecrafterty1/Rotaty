@@ -1,0 +1,9 @@
+Package: com.stoinks.rotaty
+Name: Rotaty
+Depends: mobilesubstrate
+Version: 1.0
+Architecture: iphoneos-arm
+Description: A tweak that rotates your Sprinboard icons to a random degree!
+Maintainer: Stoinks <stoinks0@gmail.com>
+Author: Stoinks <stoinks0@gmaail.com>
+Section: Tweaks
