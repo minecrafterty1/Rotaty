@@ -1,7 +1,10 @@
 #import "Rotaty.h"
-
+int r = arc4random_uniform(100) + 1;
 float rotateDegree = -15;
 
+%group Group1
+%hook
+-(void)layoutSubviews{}
 %hook SBIconView
 -(void)setIcon:(SBIcon *)arg1 {
     %orig;
@@ -19,3 +22,16 @@ float rotateDegree = -15;
     [self setTransform:(CGAffineTransformRotate(CGAffineTransformIdentity,rotateBy))];
 }
 %end
+
+%end
+
+%ctor{
+
+NSMutableDictionary *prefs =
+[[NSMutableDictionary alloc]
+initWithContentsOfFile:@"/User/Library/Preferences/com.stoinks.rotaty.prefbundle.plist"];
+
+if ([[prefs objectForKey:@"isEnabled"] boolValue]){
+%init(Group1);
+}
+}
