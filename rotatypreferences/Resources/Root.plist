@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Enabled</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.stoinks.rotatyprefs/prefschanged</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.stoinks.rotatyprefs</string>
+			<key>key</key>
+			<string>isEnabled</string>
+			<key>label</key>
+			<string>Enabled</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Options</string>
+			<key>footerText</key>
+			<string>DO NOT enable this</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.stoinks.rotatyprefs/prefschanged</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.stoinks.rotatyprefs</string>
+			<key>key</key>
+			<string>shouldAnimate</string>
+			<key>label</key>
+			<string>Animations</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Degrees</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.stoinks.rotatyprefs/prefschanged</string>
+			<key>cell</key>
+			<string>PSSliderCell</string>
+			<key>default</key>
+			<integer>0</integer> <!-- Default value of the slider -->
+			<key>defaults</key>
+			<string>com.stoinks.rotatyprefs</string> <!-- Your package name here -->
+			<key>key</key>
+			<string>rotateDegree</string> <!-- Your key name here -->
+			<key>max</key>
+			<real>90</real> <!-- Enter your maximum value here -->
+			<key>min</key>
+			<real>-90</real> <!-- Enter your minimum value here -->
+			<key>showValue</key> <!-- Show the value of the slider. true or false. -->
+			<true/>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Animation Duration</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.stoinks.rotatyprefs/prefschanged</string>
+			<key>cell</key>
+			<string>PSSliderCell</string>
+			<key>default</key>
+			<integer>1</integer> <!-- Default value of the slider -->
+			<key>defaults</key>
+			<string>com.stoinks.rotatyprefs</string> <!-- Your package name here -->
+			<key>key</key>
+			<string>animDuration</string> <!-- Your key name here -->
+			<key>max</key>
+			<real>2</real> <!-- Enter your maximum value here -->
+			<key>min</key>
+			<real>0</real> <!-- Enter your minimum value here -->
+			<key>showValue</key> <!-- Show the value of the slider. true or false. -->
+			<true/>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>Rotaty</string>
+</dict>
+</plist>
